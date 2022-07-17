@@ -1,21 +1,3 @@
-/*
-Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2015 Jack Humbert
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #pragma once
 
 #include "config_common.h"
@@ -35,18 +17,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DIODE_DIRECTION COL2ROW
 
-#define BOOTMAGIC_LITE_ROW 0
-#define BOOTMAGIC_LITE_COLUMN 0
-
-#define BOOTMAGIC_LITE_ROW_RIGHT 6
-#define BOOTMAGIC_LITE_COLUMN_RIGHT 5
+#define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 1000
 
 // WS2812 RGB LED strip input and number of LEDs
-// #define RGB_DI_PIN D3
-// #define RGBLED_NUM 12
-
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-/* number of backlight levels */
-// #define BACKLIGHT_LEVELS 3
+#undef RGB_DI_PIN
+#define RGB_DI_PIN D1
+#undef RGBLED_NUM
+#define RGBLED_NUM 20
+#define RGBLIGHT_SPLIT
+#define RGBLED_SPLIT { 10, 10 }
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_LAYERS
+#define RGBLIGHT_SLEEP // If defined, the RGB lighting will be switched off when the host goes to sleep
+#define RGBLIGHT_LIMIT_VAL 200 // max 255 (0.32A one side for 24 leds with 255, 0.29A at 250)214235525
+#define RGBLIGHT_HUE_STEP 10 // The number of steps to cycle through the hue by
+#define RGBLIGHT_SAT_STEP 17 // The number of steps to increment the saturation by
+#define RGBLIGHT_VAL_STEP 17 // The number of steps to increment the brightness by
