@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,      KC_Q,   KC_W,     KC_E,      KC_R,     KC_T,                                   KC_Y,    KC_U,    KC_I,         KC_O,      KC_P,      KC_UNDS,
     KC_CAPS,     KC_A,   KC_S,     KC_D,      KC_F,     KC_G,                                   KC_H,    KC_J,    KC_K,         KC_L,      KC_SCLN,   KC_QUOT,
     KC_LSFT,     KC_Z,   KC_X,     KC_C,      KC_V,     KC_B,                                   KC_N,    KC_M,    KC_COMM,      KC_DOT,    KC_SLSH,   KC_RSFT,
-                         KC_LWIN,  KC_LALT,   KC_SPC,   KC_BSPC,     KC_RCTL,      KC_LCTL,     KC_DEL,  KC_ENT,  KC_RALT,      KC_RWIN,
+                         KC_LWIN,  KC_LALT,   KC_SPC,   KC_BSPC,     KC_LCTL,      KC_RCTL,     KC_DEL,  KC_ENT,  KC_RALT,      KC_RWIN,
                                                         TT(_SYMBOL), TT(_NUMBER),  TT(_NUMBER), TT(_SYMBOL)
   ),
 
@@ -99,11 +99,11 @@ void persistent_default_layer_set(uint16_t default_layer) {
 }
 
 const rgblight_segment_t PROGMEM my_layer0_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 20, HSV_AZURE}
+    {0, 20, HSV_MAGENTA}
 );
 
 const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 20, HSV_TEAL}
+    {0, 20, HSV_WHITE}
 );
 
 const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
